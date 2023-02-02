@@ -5,15 +5,19 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import store from './redux';
 import Context from './utils/context';
+import './firebase'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
-        <Context>
-            <Provider store={store}>
-                <App />
-            </Provider>
-        </Context>
-    </BrowserRouter>
+    <React.StrictMode>
+        <BrowserRouter>
+            <Context>
+                <Provider store={store}>
+                    <App />
+                </Provider>
+            </Context>
+        </BrowserRouter>
+    </React.StrictMode>
 );
 
