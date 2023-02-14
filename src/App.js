@@ -32,6 +32,7 @@ import UserPage from './pages/UserPage/UserPage';
 import Brand from './pages/Brand/Brand';
 import Favorite from './pages/Favorite/Favorite';
 import Decor from './pages/Decor/Decor';
+import MakingAnOrder from './pages/MakingAnOrder/MakingAnOrder';
 
 function App() {
   return (
@@ -104,6 +105,10 @@ function App() {
           <Route
             path='Review'
             element={<Review />}
+          />
+          <Route
+            path='Making'
+            element={<MakingAnOrder />}
           />
         </Route>
         <Route
