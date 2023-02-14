@@ -1,0 +1,236 @@
+.top {
+    position: absolute;
+    transform: translateX(700px);
+    z-index: 1;
+}
+
+.kama {
+    position: relative; 
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://eleanboutique.ru/catalog/view/theme/default/assets/img/bg-fitting.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        left: -203px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #edf2f2;
+        z-index: -2;
+    }
+}
+
+.primer {
+    position: relative;
+}
+
+.imgKama {
+    opacity: 0;
+    z-index: -3;
+}
+
+.fitting {
+    transform: translateX(-110px);
+    margin-top: 52px;
+}
+
+.moscow {
+    margin-top: 52px;
+    text-align: left;
+}
+
+.russian {
+    margin-top: 52px;
+    text-align: left;
+}
+
+.table {
+    &::after {
+        content: "";
+        font-size: 0;
+        height: 100%;
+        vertical-align: middle;
+        width: 0;
+    }
+
+    &__main {
+        background-color: transparent;
+        text-align: center;
+        vertical-align: middle;
+        max-width: 100%;
+        position: relative;
+    }
+
+    &__content {
+        position: absolute;
+        transform: translateX(640px) translateY(-1570px);
+        padding: 20px 35px;
+        background-color: #fff;
+        text-align: left;
+
+        @media (max-width: 767px) {
+            padding: 64px 40px;
+        }
+
+        @media (max-width: 400px) {
+            padding: 66px 20px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 40px 20px;
+        }
+
+        &-title {
+            font-family: "FuturaBookC";
+            font-size: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            font-weight: 400;
+            color: #171717;
+
+            @media (max-width: 992px) {
+                text-align: center;
+                font-size: 20px;
+                line-height: 23px;
+            }
+        }
+
+        &-blocks {
+            display: flex;
+            padding: 16px 0px;
+            align-items: center;
+
+            @media (max-width: 500px) {
+                column-gap: 0;
+                text-align: center;
+            }
+
+            & li {
+                width: 115px;
+                flex-grow: 1;
+                font-family: "FuturaBookC";
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0.05em;
+                color: #000000;
+
+                @media (max-width: 400px) {
+                    font-size: 14px;
+                    line-height: normal;
+                }
+
+                & b {
+                    font-family: "FuturaBookC";
+                    display: inline-block;
+                    font-weight: 600;
+                    padding: 2px 4px;
+                    color: #000;
+                    line-height: 22px;
+
+                    & span {
+                        color: #c0a78f;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.reviews {
+    max-width: 186px;
+    max-height: 251px;
+}
+
+.reviews_row {
+    display: flex;
+    gap: 8px;
+}
+
+.h2 {
+    text-align: left;
+    font-size: 21px;
+}
+
+.reviews_block {
+    position: absolute;
+    padding: 40px 40px 50px;
+    transform: translateY(-960px) translateX(640px);
+    width: 650px;
+    height: 392px;
+    background: #f9f9f9;
+}
+
+.border {
+    border: 1px solid #cfd5e2;
+    margin: 10px 0;
+}
+
+.form_inner {
+    position: absolute;
+    transform: translateY(-507px) translateX(640px);
+    background: #f9f9f9;
+    width: 650px;
+    height: 392px;
+}
+
+.formIcon {
+    transform: translateX(290px) translateY(20px);
+}
+
+.form_inner h1 {
+    padding-left: 25px;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.form_input {
+    width: 300px;
+    height: 60px;
+    padding: 0 0 0 10px;
+    border: 1px solid black;
+    color: black;
+}
+
+.form_input_row1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.form_input_row2 {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.form_input_row3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.form_input_time {
+    height: 60px;
+    width: 600px;
+    border: 1px solid black;
+    padding-left: 10px;
+    background-color: #fafafa;
+    color: black
+}

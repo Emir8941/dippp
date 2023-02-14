@@ -6,15 +6,20 @@ import App from './App';
 import store from './redux';
 import Context from './utils/context';
 import './firebase';
+import { AuthContextProvider } from "./utils/AuthContext";
+import ThemeProvider from './Providers/ThemeProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
-        <Context>
-            <Provider store={store}>
-                <App />
-            </Provider>
-        </Context>
-    </BrowserRouter>
+    <ThemeProvider>
+        <AuthContextProvider>
+            <BrowserRouter>
+                <Context>
+                    <Provider store={store}>
+                        <App />
+                    </Provider>
+                </Context>
+            </BrowserRouter>
+        </AuthContextProvider>
+    </ThemeProvider>
 );
-

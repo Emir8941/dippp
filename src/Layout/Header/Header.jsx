@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Basket from './../../pages/basket/basket';
 import { CustomContext } from '../../utils/context';
+import { BsPeople } from 'react-icons/bs'
+import ThemeBtn from '../../Components/ThemeBtn';
 
 const Header = () => {
 
@@ -16,6 +18,7 @@ const Header = () => {
         <nav className='header__nav'>
           <li>
             <ul className='header__nav-icon'>
+              <ThemeBtn />
               <li className='header__nav-icon_burger'>
                 <div className='header__burger'>
                   <span className='header__burger-line'></span>
@@ -64,12 +67,12 @@ const Header = () => {
             <ul className='header__nav-num'>
               <li><a href="#">+7 (495) 150 - 14 - 77</a></li>
               <li className='header__nav-num-icon'>
-                <a href="#">
+                <Link to="Favorite">
                   <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12.5769 4.24603C11.8813 3.62026 9.21613 1.37173 6.85609 1.39471C4.43734 1.41857 0.70379 3.00156 1.0187 7.69219C1.29714 11.8357 12.3919 20.3561 12.3919 20.3561C12.4613 20.4073 12.5334 20.4073 12.6081 20.3561C12.6081 20.3561 23.7029 11.8348 23.9813 7.69219C24.2962 3.00156 20.5627 1.41857 18.143 1.39471C15.4022 1.36819 12.2496 4.40512 12.2496 4.40512L10.1093 6.58736" stroke="#333333" stroke-miterlimit="3.8637" />
                   </svg>
-                  <p className='header__nav-count'>0</p>
-                </a>
+                  <p className='header__nav-count'>4</p>
+                </Link>
                 <a onClick={() => setBasket(!basket)}>
                   <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3.67929 20.8598H0.499023V4.50195H3.73406" stroke="#333333" stroke-miterlimit="3.8637" />
@@ -81,16 +84,19 @@ const Header = () => {
                   <p className='header__nav-count'>{totalCount}</p>
                 </a>
               </li>
+              <li>
+                <Link to="userpage"><BsPeople style={{ fontSize: "24px" }} /></Link>
+              </li>
             </ul>
           </li>
         </nav>
         <nav className='header__nav-bottom'>
-          <li><a className='header__nav-bottom_link' href="#">SALE</a></li>
-          <li><a className='header__nav-bottom_link' href="#">НОВИНИКИ</a></li>
-          <li><a className='header__nav-bottom_link' href="#">КАТЕГОРИИ</a> </li>
-          <li><a className='header__nav-bottom_link' href="#">НАШИ КОЛЛЕКЦИИ</a> </li>
-          <li><a className='header__nav-bottom_link' href="#">ПОКУПАТЕЛЯМ</a> </li>
-          <li><a className='header__nav-bottom_link' href="#">О БРЕНДЕ</a></li>
+          <li><Link to="Catalog" className='header__nav-bottom_link' href="#">SALE</Link></li>
+          <li><Link to="Catalog" className='header__nav-bottom_link' href="#">НОВИНИКИ</Link></li>
+          <li><Link className='header__nav-bottom_link' to="/Catalog">КАТЕГОРИИ</Link> </li>
+          <li><Link to="Making" className='header__nav-bottom_link' href="#">НАШИ КОЛЛЕКЦИИ</Link> </li>
+          <li><Link to="Review" className='header__nav-bottom_link' href="#">ОТЗЫВЫ</Link> </li>
+          <li><Link to="Brand" className='header__nav-bottom_link' href="#">О БРЕНДЕ</Link></li>
           <li><Link to='showRoom' className='header__nav-bottom_link' href="#">ШОУРУМ</Link></li>
           <li><Link to='Contact' className='header__nav-bottom_link' href="#">КОНТАКТЫ</Link></li>
         </nav>
